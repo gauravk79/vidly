@@ -1,9 +1,8 @@
 //import * as genresAPI from "./genreService";
 import http from './httpService';
-import { apiEndpoint } from '../config.json';
 import 'react-toastify/dist/ReactToastify.css';
 
-const movieEndpoint = apiEndpoint + '/movies';
+const movieEndpoint = '/movies';
 
 function movieUrl(movieId) {
     return `${movieEndpoint}/${movieId}`; 

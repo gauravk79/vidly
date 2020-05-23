@@ -37,11 +37,11 @@ class Movies extends Component {
             });
     }
 
-    render() {
-        return (
-            (this.state.movies.length === 0 && this.state.selectedGenre === "All") ? <p>There are no movies in the database.</p> : this.renderMovies()
-        );
-    };
+    // render() {
+    //     return (
+    //         (this.state.movies.length === 0 && this.state.selectedGenre === "All") ? <p>There are no movies in the database.</p> : this.renderMovies()
+    //     );
+    // };
 
     getPaginatedData = () => {
         const { pageSize, currentPage, selectedGenre, movies: allMovies, sortColumn, searchQuery } = this.state;
@@ -58,7 +58,7 @@ class Movies extends Component {
         return { totalCount: filtered.length, data: movies };
     };
 
-    renderMovies() {
+    render() {
         const { pageSize, currentPage, selectedGenre, sortColumn, genres, searchQuery } = this.state;
         const { totalCount, data: movies } = this.getPaginatedData();
         const { user } = this.props;

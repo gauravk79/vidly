@@ -1,8 +1,6 @@
 import http from './httpService';
-import { apiEndpoint } from '../config.json';
 
-const userEndpoint = apiEndpoint + '/users';
-const authEndpoint = apiEndpoint + '/auth';
+const userEndpoint = '/users';
 
 export function registerUser(user) {
     return http.post(userEndpoint,
