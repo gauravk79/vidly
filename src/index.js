@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter } from 'react-router-dom';
+//import '@fortawesome/fontawesome-free/css/fontawesome.css';
+//import 'font-awsome/css/font-awsome.css';
+
+console.log("SUPERMAN", process.env.REACT_APP_NAME);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
